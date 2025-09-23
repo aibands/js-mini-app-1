@@ -1,15 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Homepage</title>
-</head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ペットの名前入力</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    background-color: #A8D5BA; /* ファンシーなグリーン */
+    font-family: 'Arial Rounded MT Bold', 'ヒラギノ丸ゴ Pro', 'メイリオ', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    background: #fff0f2; /* 桜色の超淡い背景 */
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    width: 320px;
+  }
+  h1 {
+    color: #d96f6f; /* 桜色より少し濃い */
+    margin-bottom: 25px;
+    font-size: 5rem;
+    text-align: center;
+    font-family:'Orbitron', sans-serif;
+  }
+  input[type="text"] {
+    width: 90%;
+    padding: 12px 15px;
+    border: 2px solid #F4C2C2; /* 桜色の枠線 */
+    border-radius: 12px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus {
+    border-color: #7AAE84; /* フォーカス時はグリーン系 */
+  }
+  button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #F4C2C2; /* 桜色 */
+    border: none;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    color: #5B3A3A; /* 落ち着いた濃い色 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #7AAE84; /* ホバーでファンシーグリーン */
+    color: white;
+  }
 
-<!-- DAIKKKKI -->
-<body>
-    daiki
-    <script src="script.js"></script>
+  .username {
+    font-weight: bold;
+    color: #d96f6f; /* 桜色 */  
+  }
+
+  .shintaro{
+    
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    
+   
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body class="flex flex-col justify-center" >
+    <section class="flex flex-col justify-center">
+    <h1>AKYNM</h1>
+  <img class="shintaro" src="./img/IMG_0339.PNG" alt="">
+  <form class="container" onsubmit="saveName(event)">
+    <label>Name:</label>
+    <input type="text" id="username" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function saveName(event) {
+      event.preventDefault();
+      const name = document.getElementById("username").value;
+      localStorage.setItem("username", name); // save in browser
+      window.location.href = "welcome.html"; // go to next page
+    }
+  </script>
+    </section>
 </body>
 </html>
