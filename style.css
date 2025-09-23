@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 2rem;
+}
+
+header {
+    padding: 1rem;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+}
