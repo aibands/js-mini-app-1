@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Itens Box */
+
+.function-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 2%;
+    bottom: 3%;
+    justify-items: right;
+    max-width: 100px;
+    background-color: rgb(255, 145, 0);
+    padding: 10px;
+    /* padding-top: 0; */
+    border-radius: 20px;
+    gap: 10px;
+        /* padding-top: 10px; */
+
+}
+
+.function-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+    max-height: 0;
+    gap: 10px;
+}
+
+#living-room-img {
+    width: 60px;
+}
+
+#living-room-btn{
+    border-radius: 30px;
+    border: none;
+}
+
+.function-box:hover {
+    max-width: 80px;
+    
+    .function-items {
+        opacity: 1;
+        max-height: 300px;
+    }
+
+}
+
+#kitchen-icon{
+    width: 60px;
+    height: 60px;
+}
+
+#kitchen-icon-btn{
+    border: none;
+    border-radius: 30px;
+}
+
+#bathroom-icon{
+    width: 60px;
+    height: 60px;
+}
+
+#bathroom-icon-btn{
+    border: none;
+    border-radius: 30px;
+}
+
+#bedroom-icon{
+    width: 60px;
+    height: 60px;
+}
+
+#bedroom-icon-btn{
+    border: none;
+    border-radius: 30px;
+}
+
+/* Function Button */
+
+#action-btn-section{
+    display: flex;
+    bottom: 3%;
+    left: 3%;
+    position: absolute;
+}
+
+.function-buttons{
+    border: none;
+    background-color: white;
+}
+
+#eat-btn{
+    width: 80px;
+    height: 80px;
+}
+
+
+#sleep-btn{
+    height: 80px;
+    width: 80px;
+}
+
+
+#bathroom-btn{
+    height: 80px;
+    width: 80px;
+}
