@@ -11,10 +11,10 @@ Users can interact with the pet by helping it feel happy when it is sad. This ca
 - Figma
 
 # Contributing
-Aiya Tossapol
-Tiana Kim
-Matheus Gabriel
-Daiki Edibisuya
+- Aiya Tossapol
+- Tiana Kim
+- Matheus Gabriel
+- Daiki Edibisuya
 
 # License
 This project is for showcase purposes and is not open-source.
