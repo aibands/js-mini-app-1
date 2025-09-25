@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Itens Box */
+
+.function-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 2%;
+    bottom: 3%;
+    justify-items: right;
+    max-width: 100px;
+    background-color: rgb(255, 145, 0);
+    padding: 10px;
+    /* padding-top: 0; */
+    border-radius: 20px;
+    gap: 10px;
+    /* padding-top: 10px; */
+
+}
+
+.function-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+    max-height: 0;
+    gap: 10px;
+}
+
+#living-room-img {
+    width: 60px;
+}
+
+#living-room-btn {
+    border-radius: 30px;
+    border: none;
+}
+
+.function-box:hover {
+    max-width: 80px;
+
+    .function-items {
+        opacity: 1;
+        max-height: 300px;
+    }
+
+}
+
+#kitchen-icon {
+    width: 60px;
+    height: 60px;
+}
+
+#kitchen-icon-btn {
+    border: none;
+    border-radius: 30px;
+}
+
+#bathroom-icon {
+    width: 60px;
+    height: 60px;
+}
+
+#bathroom-icon-btn {
+    border: none;
+    border-radius: 30px;
+}
+
+#bedroom-icon {
+    width: 60px;
+    height: 60px;
+}
+
+#bedroom-icon-btn {
+    border: none;
+    border-radius: 30px;
+}
+
+/* Function Button */
+
+#action-btn-section {
+    display: flex;
+    bottom: 3%;
+    left: 3%;
+    position: absolute;
+}
+
+.action-buttons {
+    border: none;
+    background-color: rgba(197, 181, 181, 0.6);
+    border-radius: 100px;
+}
+
+#eat-btn {
+    width: 80px;
+    height: 80px;
+}
+
+
+#sleep-btn {
+    height: 80px;
+    width: 80px;
+}
+
+
+#bathroom-btn {
+    height: 80px;
+    width: 80px;
+}
+
+/* Javascript configuration */
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+    min-height: 100vh;
+}
+
+.bedroom-background {
+    background-image: url('./img/Bedroom_bg_test.png');
+}
+
+.bathroom-background {
+    background-image: url('./img/toilet_bg_test.png');
+}
+
+.kitchen-background {
+    background-image: url('./img/kitchen_bg_test.png');
+}
+
+.home-background {
+    background-image: url('./img/home_bg_test.png');
+}
+
+/* Action Buttons */
+
+#action-btn-section>div {
+    display: none;
+}
+
+.show-action-buttons {
+    display: block;
+}
+
+    text-decoration: none;
+}
+
+/* for homepage */
+
+  .container {
+    background: #fff0f2; /* 桜色の超淡い背景 */
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    width: 320px;
+  }
+
+  #gamename {
+    color: #d96f6f; /* 桜色より少し濃い */
+    margin-bottom: 25px;
+    font-size: 5rem;
+    text-align: center;
+    font-family: "Silkscreen", sans-serif;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #F4C2C2; /* 桜色の枠線 */
+    border-radius: 12px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: "Silkscreen", sans-serif;
+  }
+
+  input[type="text"]:focus {
+    border-color: #7AAE84; /* フォーカス時はグリーン系 */
+  }
+
+  button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #F4C2C2; /* 桜色 */
+    border: none;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    color: #5B3A3A; /* 落ち着いた濃い色 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Silkscreen", sans-serif;
+  }
+
+  button:hover {
+    background-color: #7AAE84; /* ホバーでファンシーグリーン */
+    color: white;
+  }
+
+  .username {
+    font-weight: bold;
+    color: #d96f6f; /* 桜色 */  
+  }
+
+  .shintaro{
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+   #submitBtn:disabled {
+      background-color: #ccc; /* グレー */
+      color: #666;
+      cursor: not-allowed;
+    }
+
+    #submitBtn {
+      background-color: #4CAF50; /* 緑 */
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+/* dashboard */
+
+h1 {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 2rem;
+}
+
+header {
+    padding: 1rem;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+}
+
+
