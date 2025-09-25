@@ -125,19 +125,19 @@ body {
 }
 
 .bedroom-background {
-    background-image: url('./img/Bedroom_bg_test.png');
+    background-image: url('./asstes_tiana/bedroom.png');
 }
 
 .bathroom-background {
-    background-image: url('./img/toilet_bg_test.png');
+    background-image: url('./asstes_tiana/toilets.png');
 }
 
 .kitchen-background {
-    background-image: url('./img/kitchen_bg_test.png');
+    background-image: url('./asstes_tiana/kitchen.png');
 }
 
 .home-background {
-    background-image: url('./img/home_bg_test.png');
+    background-image: url('./asstes_tiana/bg_home.png');
 }
 
 /* Action Buttons */
@@ -248,10 +248,19 @@ header {
     padding: 1rem;
 }
 
-.avatar {
+.charactor {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
+.avatar {
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./asstes_tiana/character_default1.png);
+}  
 
 header {
     background-color: rgba(255, 255, 255, 0.7);

@@ -58,3 +58,74 @@ locationButtons.forEach(button => {
     updateView(location);
   });
 });
+
+// for avatar
+const avatar = document.querySelector(".avatar");
+
+const states = {
+  idle: [
+    "./asstes_tiana/character_default1.png",
+    "./asstes_tiana/character_default2.png"
+  ],
+  hungry: [
+    "./asstes_tiana/character_hungry1.png",
+    "./asstes_tiana/character_hungry2.png"
+  ],
+  sleepy: [
+    "./asstes_tiana/character_sleepy1.png",
+    "./asstes_tiana/character_sleepy2.png"
+  ],
+  toilet: [
+    "./asstes_tiana/character_toilet1.png",
+    "./asstes_tiana/character_toilet2.png"
+  ]
+};
+
+let currentState = "idle"; 
+let animationInterval;
+
+// default
+function startAnimation(state) {
+  clearInterval(animationInterval); 
+  currentState = state;
+
+  let frame = 0;
+  avatar.style.backgroundImage = `url(${states[state][frame]})`;
+
+  animationInterval = setInterval(() => {
+    frame = (frame + 1) % states[state].length;
+    avatar.style.backgroundImage = `url(${states[state][frame]})`;
+  }, 500); // switch every 0.5s
+}
+
+// chang to action
+const actionStates = ["hungry", "sleepy", "toilet"];
+let actionIndex = 0;
+
+function changeState() {
+  startAnimation(actionStates[actionIndex]);
+  actionIndex = (actionIndex + 1) % actionStates.length;
+}
+
+// click button
+function handleAction(action) {
+  if (
+    (currentState === "hungry" && action === "kitchen") ||
+    (currentState === "sleepy" && action === "bedroom") ||
+    (currentState === "toilet" && action === "bathroom")
+  ) {
+    startAnimation("idle");
+  }
+}
+
+// make it action
+document.querySelectorAll("[data-action]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const action = btn.getAttribute("data-action");
+    handleAction(action);
+  });
+});
+
+// make it repeat
+startAnimation("idle");
+setInterval(changeState, 10000);
