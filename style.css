@@ -45,11 +45,10 @@
 }
 
 .function-box:hover {
-    max-width: 80px;
 
     .function-items {
         opacity: 1;
-        max-height: 300px;
+        max-height: 400px;
     }
 }
 
