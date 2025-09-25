@@ -2,6 +2,156 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+}
+
+/* Itens Box */
+
+.function-box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 2%;
+    bottom: 3%;
+    justify-items: right;
+    max-width: 100px;
+    background-color: rgb(255, 145, 0);
+    padding: 10px;
+    /* padding-top: 0; */
+    border-radius: 20px;
+    gap: 10px;
+    /* padding-top: 10px; */
+
+}
+
+.function-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+    max-height: 0;
+    gap: 10px;
+}
+
+#living-room-img {
+    width: 60px;
+}
+
+#living-room-btn {
+    border-radius: 30px;
+    border: none;
+}
+
+.function-box:hover {
+    max-width: 80px;
+
+    .function-items {
+        opacity: 1;
+        max-height: 300px;
+    }
+
+}
+
+#kitchen-icon {
+    width: 60px;
+    height: 60px;
+}
+
+#kitchen-icon-btn {
+    border: none;
+    border-radius: 30px;
+}
+
+#bathroom-icon {
+    width: 60px;
+    height: 60px;
+}
+
+#bathroom-icon-btn {
+    border: none;
+    border-radius: 30px;
+}
+
+#bedroom-icon {
+    width: 60px;
+    height: 60px;
+}
+
+#bedroom-icon-btn {
+    border: none;
+    border-radius: 30px;
+}
+
+/* Function Button */
+
+#action-btn-section {
+    display: flex;
+    bottom: 3%;
+    left: 3%;
+    position: absolute;
+}
+
+.action-buttons {
+    border: none;
+    background-color: rgba(197, 181, 181, 0.6);
+    border-radius: 100px;
+}
+
+#eat-btn {
+    width: 80px;
+    height: 80px;
+}
+
+
+#sleep-btn {
+    height: 80px;
+    width: 80px;
+}
+
+
+#bathroom-btn {
+    height: 80px;
+    width: 80px;
+}
+
+/* Javascript configuration */
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+    min-height: 100vh;
+}
+
+.bedroom-background {
+    background-image: url('./img/Bedroom_bg_test.png');
+}
+
+.bathroom-background {
+    background-image: url('./img/toilet_bg_test.png');
+}
+
+.kitchen-background {
+    background-image: url('./img/kitchen_bg_test.png');
+}
+
+.home-background {
+    background-image: url('./img/home_bg_test.png');
+}
+
+/* Action Buttons */
+
+#action-btn-section>div {
+    display: none;
+}
+
+.show-action-buttons {
+    display: block;
+}
+
     text-decoration: none;
 }
 
@@ -106,4 +256,5 @@ header {
     display: flex;
     justify-content: center;
 }
+
 
